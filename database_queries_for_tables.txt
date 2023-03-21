@@ -1,0 +1,21 @@
+## country table
+CREATE TABLE country (
+  code VARCHAR(2) NOT NULL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+
+## Currency table 
+CREATE TABLE currency (
+  code VARCHAR(2) NOT NULL PRIMARY KEY,
+  currency VARCHAR(3) NOT NULL
+  FOREIGN KEY (code) REFERENCES country (code)
+);
+
+
+## Data merge table
+CREATE TABLE data_merge (
+    code VARCHAR(2) PRIMARY KEY,
+    name VARCHAR(255),
+    currency VARCHAR(3)
+);

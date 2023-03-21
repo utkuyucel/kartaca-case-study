@@ -1,0 +1,29 @@
+##Bu dosya readme.md'ye yazılacak
+
+
+
+1 - airflow adında bir klasör oluşturun
+
+2 - klasör içerisine, repoda bulunan dosyaları yükleyin.
+
+3 - Bir terminal açarak klasörün bulunduğu konuma gelin
+
+4 - "docker-compose airflow init" komutunu girerek container'ı kurun. Container için gerekli olan config dosyalarının hepsi "docker-compose.yaml" dosyası içerisindedir.
+
+5 - "docker-compose up" ile container ve içeriklerini ayağa kaldırın.  (localhost:8080 üzerinden airflow ayağa kalkıyor ancak mysql ayağa kalksa da localhost:3306 üzerinden kendi makinemde erişemedim)
+
+Tabloları incelemek için:
+
+    1 - Docker desktop üzerinden "mysql-1" üzerinde tıklayıp terminal kısmına geçin ve "mysql -u root -p" yazdıktan sonra gerekli olan şifreyi (kartaca) girin.
+
+    2 - Kullanacağınız database'in ismi, "country_currency". 
+
+
+
+
+
+
+
+
+
+
