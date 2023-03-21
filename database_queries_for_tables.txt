@@ -1,19 +1,24 @@
-## country table
+-- crate the database
+CREATE DATABASE country_currency;
+
+
+
+-- country table
 CREATE TABLE country (
   code VARCHAR(2) NOT NULL PRIMARY KEY,
   name VARCHAR(255) NOT NULL
 );
 
 
-## Currency table 
+-- Currency table 
 CREATE TABLE currency (
   code VARCHAR(2) NOT NULL PRIMARY KEY,
-  currency VARCHAR(3) NOT NULL
+  currency VARCHAR(3) NOT NULL,
   FOREIGN KEY (code) REFERENCES country (code)
 );
 
 
-## Data merge table
+-- Data merge table
 CREATE TABLE data_merge (
     code VARCHAR(2) PRIMARY KEY,
     name VARCHAR(255),

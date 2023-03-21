@@ -2,21 +2,38 @@
 
 
 
-1 - airflow adında bir klasör oluşturun
+1 - git üzerinden dosyayı clonelayın veya .zip olarak indirin. 
 
-2 - klasör içerisine, repoda bulunan dosyaları yükleyin.
+2 - airflow isimli dosyanın içerisinde girin ve burada bir terminal açın.
 
-3 - Bir terminal açarak klasörün bulunduğu konuma gelin
+3 - "docker-compose up airflow-init" komutunu girerek container'ı kurun. Container için gerekli olan config dosyalarının hepsi "docker-compose.yaml" dosyası içerisindedir.
 
-4 - "docker-compose airflow init" komutunu girerek container'ı kurun. Container için gerekli olan config dosyalarının hepsi "docker-compose.yaml" dosyası içerisindedir.
-
-5 - "docker-compose up" ile container ve içeriklerini ayağa kaldırın.  (localhost:8080 üzerinden airflow ayağa kalkıyor ancak mysql ayağa kalksa da localhost:3306 üzerinden kendi makinemde erişemedim)
+4 - "docker-compose up" ile container ve içeriklerini ayağa kaldırın.  (localhost:8080 üzerinden airflow ayağa kalkıyor ancak mysql ayağa kalksa da localhost:3306 üzerinden kendi makinemde erişemedim)
 
 Tabloları incelemek için:
 
     1 - Docker desktop üzerinden "mysql-1" üzerinde tıklayıp terminal kısmına geçin ve "mysql -u root -p" yazdıktan sonra gerekli olan şifreyi (kartaca) girin.
+        
+    2 - "database_queries_for_tables.txt" dosyası içerisindeki her bir sql query'sini tek tek (Kod bloğu halinde) çalıştırın.
 
-    2 - Kullanacağınız database'in ismi, "country_currency". 
+Airflow üzerinde:
+
+    1 - Admin > Connections kısmından yeni bir connection oluşturun.
+
+    2 - Aşağıdaki inputları girin:
+
+        Conn Id : mysql_default
+        Conn Type: MySQL
+        Host: mysql
+        Schema: airflow
+        Login: root
+        Password: kartaca (Eğer olmazsa root deneyebilirsiniz.)
+        Port:3306
+
+    Sonrasında Save ederek connection oluşturmuş olacaksınız.
+
+
+- DAG'ları, yanlarındaki butonlara tıklayarak aktifleştirdikten sonra manuel olarak triggerlayabilirsiniz.
 
 
 
