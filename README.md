@@ -1,5 +1,10 @@
 # Veri Mühendisliği - Case Study
 
+## Verilen Case, aşağıdaki gibi parçalara ayrılmış ve analiz ediltikten sonra gerekli algoritma kurulup yapılmaya başlanmıştır.
+
+![problem-solving](Images/kartaca_algorithm.jpg)
+
+
 1. Git üzerinden dosyayı clonelayın veya .zip olarak indirin.
 
 2. `airflow` isimli dosyanın içerisinde girin ve burada bir terminal açın.
